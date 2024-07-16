@@ -12,7 +12,7 @@ router.get('/', (req, res) => {
 
 router.get('/:os', (req, res) => {
     try {
-        const data = ordemServicoData.ordems_servico.find(c => c.os === +req.params.os);
+        const data = ordemServicoData.ordems_servico.find(c => c.os == req.params.os);
         if (!data) {
             res.status(404).json({ message: `Dados não encontrados para a OS: '${req.params.os}'` });
         }

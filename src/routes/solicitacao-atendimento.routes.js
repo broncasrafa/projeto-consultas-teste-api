@@ -12,7 +12,7 @@ router.get('/', (req, res) => {
 
 router.get('/:sa', (req, res) => {
     try {
-        const data = solicitacoesAtendimentoData.solicitacoes_atendimento.find(c => c.sa === +req.params.sa);
+        const data = solicitacoesAtendimentoData.solicitacoes_atendimento.find(c => c.sa == req.params.sa);
         if (!data) {
             res.status(404).json({ message: `Dados não encontrados para a SA: '${req.params.sa}'` });
         }
