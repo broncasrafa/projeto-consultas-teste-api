@@ -2,10 +2,9 @@
   "name": "api-testes",
   "version": "1.0.0",
   "description": "Api de testes para ver projetos poc",
-  "main": "app.js",
+  "main": "server.js",
   "scripts": {
-    "start": "node app.js",
-    "dev": "nodemon app.js"
+    "start": "node server.js"
   },
   "author": "Rafael Francisco",
   "license": "MIT",
