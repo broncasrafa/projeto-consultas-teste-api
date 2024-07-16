@@ -23,6 +23,14 @@ router.get('/:instalacao/dados-cadastrais', (req, res) => {
     }
 })
 
+router.get('/consulta-instalacao', (req, res) => {
+    try {
+        res.status(200).json(instalacoesData.consulta_instalacao);
+    } catch (error) {
+        res.status(400).json(err.message);
+    }
+})
+
 
 
 module.exports = router;
