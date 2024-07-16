@@ -4,7 +4,7 @@ var estadoService = require('../services/estados.services');
 var cidadeService = require('../services/cidades.services');
 
 
-router.get('/estados', (req, res) => {
+router.get('/', (req, res) => {
   estadoService.getEstados().then(function(result) {
     res.status(200).json(result);
   })
@@ -13,7 +13,7 @@ router.get('/estados', (req, res) => {
   });
 })
 
-router.get('/estados/:id/cidades', (req, res) => {
+router.get('/:id/cidades', (req, res) => {
   cidadeService.getCidadesByIdEstado(req.params.id).then(function(result) {
     res.status(200).json(result);
   })

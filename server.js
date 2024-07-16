@@ -1,7 +1,11 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const cors = require('cors');
+
 const estadosRoutes = require('./src/routes/estados.routes');
+const instalacaoRoutes = require('./src/routes/instalacoes.routes');
+const solicitacoesAtendimentoRoutes = require('./src/routes/solicitacao-atendimento.routes');
+const ordemServicoRoutes = require('./src/routes/ordem-servico.routes');
 
 const app = express();
 const port = process.env.PORT || 3005;
@@ -31,7 +35,11 @@ app.get('/', function(req, res) {
 })
 
 // Rotas
-app.use('/api', estadosRoutes);
+app.use('/api/estados', estadosRoutes);
+app.use('/api/instalacao', instalacaoRoutes);
+app.use('/api/solicitacao-atendimento', solicitacoesAtendimentoRoutes);
+app.use('/api/ordem-servico', ordemServicoRoutes);
+
 
 // Inicia o servidor
 app.listen(port, () => {
