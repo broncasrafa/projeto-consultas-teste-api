@@ -170,26 +170,45 @@ module.exports.dados_cadastrais_instalacao = {
           "ultima_leitura": "03",
           "data_instalacao": "27/07/2023 11h00",
           "medicao": "",
-          "demais_itens": "015C0200"
+          "rel_transf": "",
+          "m_massa": "",
+          "telemedido": "",
+          "retaguarda": ""
         },
         {
           "medidor": "002",
           "funcao": "12345689",
           "ultima_leitura": "03",
-          "data_instalacao": "18/07/2023 17h30",
+          "data_instalacao": "27/07/2023 11h00",
           "medicao": "",
-          "demais_itens": "015C0200"
+          "rel_transf": "",
+          "m_massa": "",
+          "telemedido": "",
+          "retaguarda": ""
         }
       ],
       "equipamentos_instalados": [
         {
-          "demais_itens": ""
+          "equipamento": "002",
+          "tipo": "12345678",
+          "data_instalacao": "03",
+          "rel_transformacao": "34578",
+          "fator_calc": "",
+          "modelo": "",
+          "gr_enrolamento": "",
+          "classe_funcao": "",
+          "classe_construcao": ""
         },
         {
-          "demais_itens": ""
-        },
-        {
-          "demais_itens": ""
+          "equipamento": "002",
+          "tipo": "12345678",
+          "data_instalacao": "03",
+          "rel_transformacao": "0",
+          "fator_calc": "",
+          "modelo": "",
+          "gr_enrolamento": "",
+          "classe_funcao": "",
+          "classe_construcao": ""
         }
       ]
     }
