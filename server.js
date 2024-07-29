@@ -6,6 +6,7 @@ const estadosRoutes = require('./src/routes/estados.routes');
 const instalacaoRoutes = require('./src/routes/instalacoes.routes');
 const solicitacoesAtendimentoRoutes = require('./src/routes/solicitacao-atendimento.routes');
 const ordemServicoRoutes = require('./src/routes/ordem-servico.routes');
+const authRoutes = require('./routes/auth.routes');
 
 const app = express();
 const port = process.env.PORT || 3005;
@@ -62,7 +63,7 @@ app.use('/api/estados', estadosRoutes);
 app.use('/api/instalacao', instalacaoRoutes);
 app.use('/api/solicitacao-atendimento', solicitacoesAtendimentoRoutes);
 app.use('/api/ordem-servico', ordemServicoRoutes);
-
+app.use('/api/auth/login', authRoutes);
 
 // Inicia o servidor
 app.listen(port, () => {
